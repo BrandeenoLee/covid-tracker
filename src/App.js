@@ -40,5 +40,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-//useless change
