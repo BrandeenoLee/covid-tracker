@@ -1,18 +1,17 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import CardComponent from './Cards';
+import CardComponent from './Card/Card';
 
 import styles from './Cards.module.css';
 
-const Info = ({data}) => {
- console.log('Info componentloading...',data)
+const Cards = ({data}) => {
+ console.log('Info componentloading WTF...',data)
  if (!data) 
   return "Loading..";
 
 const { confirmed, recovered, deaths, lastUpdate } = data;
 if (!confirmed) 
   return "Fetching...";
-
 
 return (
   <div className={styles.container}>
@@ -42,4 +41,4 @@ return (
   </div>
 );
 };
-export default Info;
+export default Cards;

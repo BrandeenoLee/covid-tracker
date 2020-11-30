@@ -7,12 +7,16 @@ import styles from './App.module.css';
 import image from './images/cvid.png';
 
 class App extends React.Component {
-  state = {
-    data: {},
-    country: '',
-  }
+  constructor(props) {
+    super(props);
+    this.state = {
+        data: {},
+        country: '',
+    };
+  };
 
   async componentDidMount() {
+    console.log("componentDidMount")
     const data = await fetchData();
 
     this.setState({ data });
@@ -36,7 +40,7 @@ class App extends React.Component {
         <Chart data={data} country={country} /> 
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;
